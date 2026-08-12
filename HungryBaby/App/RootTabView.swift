@@ -16,7 +16,7 @@ struct RootTabView: View {
                 RecipeListView()
             }
             Tab("冷蔵庫", systemImage: "refrigerator") {
-                Text("冷蔵庫検索（実装予定）")
+                FridgeSearchView()
             }
         }
         .onAppear {
