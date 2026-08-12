@@ -3,6 +3,7 @@ import SwiftData
 
 struct OnboardingView: View {
     @Environment(BabyProfileService.self) private var profileService
+    @Environment(\.dismiss) private var dismiss
     @State private var viewModel = OnboardingViewModel()
 
     var body: some View {
@@ -71,6 +72,7 @@ struct OnboardingView: View {
 
                 Button {
                     viewModel.complete(using: profileService)
+                    dismiss()
                 } label: {
                     Text("はじめる")
                         .font(.headline)
