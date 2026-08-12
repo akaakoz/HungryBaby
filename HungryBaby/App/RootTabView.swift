@@ -10,7 +10,7 @@ struct RootTabView: View {
                 AgeGuideView()
             }
             Tab("食材サイズ", systemImage: "ruler") {
-                Text("食材の大きさガイド（実装予定）")
+                SizeGuideView()
             }
             Tab("レシピ", systemImage: "fork.knife") {
                 Text("簡単メニュー（実装予定）")
