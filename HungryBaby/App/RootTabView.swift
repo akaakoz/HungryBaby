@@ -13,7 +13,7 @@ struct RootTabView: View {
                 SizeGuideView()
             }
             Tab("レシピ", systemImage: "fork.knife") {
-                Text("簡単メニュー（実装予定）")
+                RecipeListView()
             }
             Tab("冷蔵庫", systemImage: "refrigerator") {
                 Text("冷蔵庫検索（実装予定）")
