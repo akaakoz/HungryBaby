@@ -7,7 +7,7 @@ struct RootTabView: View {
     var body: some View {
         TabView {
             Tab("月齢ガイド", systemImage: "calendar") {
-                Text("月齢ガイド（実装予定）")
+                AgeGuideView()
             }
             Tab("食材サイズ", systemImage: "ruler") {
                 Text("食材の大きさガイド（実装予定）")
