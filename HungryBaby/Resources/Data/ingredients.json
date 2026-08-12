@@ -1,0 +1,667 @@
+[
+  {
+    "id": "rice",
+    "nameJP": "ごはん・お粥",
+    "nameEN": "Rice",
+    "category": "grain",
+    "allergen": false,
+    "notes": "10倍粥から始め、月齢に合わせて水分量を調整する",
+    "safety": {
+      "gokun": { "level": "ok", "sizeGuidance": "なめらかに裏ごした10倍粥（ペースト状）" },
+      "mogumogu": { "level": "ok", "sizeGuidance": "粒が残る7倍粥" },
+      "kamikamu": { "level": "ok", "sizeGuidance": "5倍粥" },
+      "pakupaku": { "level": "ok", "sizeGuidance": "軟飯" }
+    }
+  },
+  {
+    "id": "bread",
+    "nameJP": "食パン",
+    "nameEN": "Bread",
+    "category": "grain",
+    "allergen": true,
+    "notes": "小麦アレルギーに注意。初めて与える場合は少量から",
+    "safety": {
+      "gokun": { "level": "ok", "sizeGuidance": "パンがゆにして与える（耳は除く）" },
+      "mogumogu": { "level": "ok", "sizeGuidance": "小さくちぎってスープに浸す" },
+      "kamikamu": { "level": "ok", "sizeGuidance": "1cm角程度に切る" },
+      "pakupaku": { "level": "ok", "sizeGuidance": "1〜2cm角に切る" }
+    }
+  },
+  {
+    "id": "udon",
+    "nameJP": "うどん",
+    "nameEN": "Udon",
+    "category": "grain",
+    "allergen": true,
+    "notes": "小麦アレルギーに注意。塩分の少ないものを選ぶ",
+    "safety": {
+      "gokun": { "level": "ok", "sizeGuidance": "やわらかく茹でてすりつぶす" },
+      "mogumogu": { "level": "ok", "sizeGuidance": "2〜3mm程度に刻む" },
+      "kamikamu": { "level": "ok", "sizeGuidance": "5mm程度に刻む" },
+      "pakupaku": { "level": "ok", "sizeGuidance": "1cm程度に刻む" }
+    }
+  },
+  {
+    "id": "potato",
+    "nameJP": "じゃがいも",
+    "nameEN": "Potato",
+    "category": "vegetable",
+    "allergen": false,
+    "safety": {
+      "gokun": { "level": "ok", "sizeGuidance": "茹でてなめらかにすりつぶす" },
+      "mogumogu": { "level": "ok", "sizeGuidance": "やわらかく茹でて3mm角にする" },
+      "kamikamu": { "level": "ok", "sizeGuidance": "5mm角程度に切る" },
+      "pakupaku": { "level": "ok", "sizeGuidance": "1cm角に切る" }
+    }
+  },
+  {
+    "id": "sweet_potato",
+    "nameJP": "さつまいも",
+    "nameEN": "Sweet Potato",
+    "category": "vegetable",
+    "allergen": false,
+    "notes": "甘味があり食べやすい。食物繊維が豊富",
+    "safety": {
+      "gokun": { "level": "ok", "sizeGuidance": "茹でてなめらかにすりつぶす" },
+      "mogumogu": { "level": "ok", "sizeGuidance": "やわらかく蒸して3mm角にする" },
+      "kamikamu": { "level": "ok", "sizeGuidance": "5mm角程度" },
+      "pakupaku": { "level": "ok", "sizeGuidance": "1cm角程度" }
+    }
+  },
+  {
+    "id": "carrot",
+    "nameJP": "にんじん",
+    "nameEN": "Carrot",
+    "category": "vegetable",
+    "allergen": false,
+    "safety": {
+      "gokun": { "level": "ok", "sizeGuidance": "やわらかく茹でてすりつぶす" },
+      "mogumogu": { "level": "ok", "sizeGuidance": "やわらかく茹でて3mm角にする" },
+      "kamikamu": { "level": "ok", "sizeGuidance": "5mm角程度" },
+      "pakupaku": { "level": "ok", "sizeGuidance": "1cm角程度" }
+    }
+  },
+  {
+    "id": "pumpkin",
+    "nameJP": "かぼちゃ",
+    "nameEN": "Pumpkin",
+    "category": "vegetable",
+    "allergen": false,
+    "notes": "甘味があり、ビタミンA豊富",
+    "safety": {
+      "gokun": { "level": "ok", "sizeGuidance": "皮を除いて茹でてすりつぶす" },
+      "mogumogu": { "level": "ok", "sizeGuidance": "3mm角のやわらかい状態" },
+      "kamikamu": { "level": "ok", "sizeGuidance": "5mm角程度" },
+      "pakupaku": { "level": "ok", "sizeGuidance": "1cm角程度" }
+    }
+  },
+  {
+    "id": "broccoli",
+    "nameJP": "ブロッコリー",
+    "nameEN": "Broccoli",
+    "category": "vegetable",
+    "allergen": false,
+    "safety": {
+      "gokun": { "level": "ok", "sizeGuidance": "穂先のみやわらかく茹でてすりつぶす" },
+      "mogumogu": { "level": "ok", "sizeGuidance": "穂先を細かく刻む（3mm程度）" },
+      "kamikamu": { "level": "ok", "sizeGuidance": "5mm程度に刻む" },
+      "pakupaku": { "level": "ok", "sizeGuidance": "1cm程度に切る" }
+    }
+  },
+  {
+    "id": "spinach",
+    "nameJP": "ほうれん草",
+    "nameEN": "Spinach",
+    "category": "vegetable",
+    "allergen": false,
+    "notes": "えぐみを取るためアク抜きをしっかり行う",
+    "safety": {
+      "gokun": { "level": "ok", "sizeGuidance": "葉先のみ茹でてすりつぶす" },
+      "mogumogu": { "level": "ok", "sizeGuidance": "細かく刻む（3mm程度）" },
+      "kamikamu": { "level": "ok", "sizeGuidance": "5mm程度に刻む" },
+      "pakupaku": { "level": "ok", "sizeGuidance": "1cm程度に切る" }
+    }
+  },
+  {
+    "id": "tomato",
+    "nameJP": "トマト",
+    "nameEN": "Tomato",
+    "category": "vegetable",
+    "allergen": false,
+    "notes": "皮と種を除いて使用する",
+    "safety": {
+      "gokun": { "level": "ok", "sizeGuidance": "皮・種を除いてすりつぶす" },
+      "mogumogu": { "level": "ok", "sizeGuidance": "皮・種を除いて3mm角に切る" },
+      "kamikamu": { "level": "ok", "sizeGuidance": "5mm角程度" },
+      "pakupaku": { "level": "ok", "sizeGuidance": "1cm角程度" }
+    }
+  },
+  {
+    "id": "corn",
+    "nameJP": "とうもろこし",
+    "nameEN": "Corn",
+    "category": "vegetable",
+    "allergen": false,
+    "notes": "薄皮を除いて使用する",
+    "safety": {
+      "gokun": { "level": "ok", "sizeGuidance": "薄皮を除いてすりつぶしてから裏ごしする" },
+      "mogumogu": { "level": "ok", "sizeGuidance": "薄皮を除いて細かく刻む" },
+      "kamikamu": { "level": "ok", "sizeGuidance": "粒をほぐして与える" },
+      "pakupaku": { "level": "ok", "sizeGuidance": "そのまま与えてよい" }
+    }
+  },
+  {
+    "id": "onion",
+    "nameJP": "玉ねぎ",
+    "nameEN": "Onion",
+    "category": "vegetable",
+    "allergen": false,
+    "notes": "よく加熱して辛みを飛ばす",
+    "safety": {
+      "gokun": { "level": "ok", "sizeGuidance": "やわらかく茹でてすりつぶす" },
+      "mogumogu": { "level": "ok", "sizeGuidance": "3mm角に刻む" },
+      "kamikamu": { "level": "ok", "sizeGuidance": "5mm角程度" },
+      "pakupaku": { "level": "ok", "sizeGuidance": "1cm角程度" }
+    }
+  },
+  {
+    "id": "cabbage",
+    "nameJP": "キャベツ",
+    "nameEN": "Cabbage",
+    "category": "vegetable",
+    "allergen": false,
+    "safety": {
+      "gokun": { "level": "ok", "sizeGuidance": "やわらかく茹でてすりつぶす" },
+      "mogumogu": { "level": "ok", "sizeGuidance": "3mm程度に細かく刻む" },
+      "kamikamu": { "level": "ok", "sizeGuidance": "5mm程度に切る" },
+      "pakupaku": { "level": "ok", "sizeGuidance": "1cm程度に切る" }
+    }
+  },
+  {
+    "id": "daikon",
+    "nameJP": "大根",
+    "nameEN": "Daikon",
+    "category": "vegetable",
+    "allergen": false,
+    "safety": {
+      "gokun": { "level": "ok", "sizeGuidance": "やわらかく茹でてすりつぶす" },
+      "mogumogu": { "level": "ok", "sizeGuidance": "3mm角に刻む" },
+      "kamikamu": { "level": "ok", "sizeGuidance": "5mm角程度" },
+      "pakupaku": { "level": "ok", "sizeGuidance": "1cm角程度" }
+    }
+  },
+  {
+    "id": "apple",
+    "nameJP": "りんご",
+    "nameEN": "Apple",
+    "category": "fruit",
+    "allergen": false,
+    "notes": "皮と種を除く",
+    "safety": {
+      "gokun": { "level": "ok", "sizeGuidance": "皮・種を除いてすりおろす" },
+      "mogumogu": { "level": "ok", "sizeGuidance": "やわらかく煮てすりおろすか細かく刻む" },
+      "kamikamu": { "level": "ok", "sizeGuidance": "5mm角程度（生でも可）" },
+      "pakupaku": { "level": "ok", "sizeGuidance": "1cm角程度" }
+    }
+  },
+  {
+    "id": "banana",
+    "nameJP": "バナナ",
+    "nameEN": "Banana",
+    "category": "fruit",
+    "allergen": false,
+    "notes": "甘味が強く食べやすい。糖質が高いため与えすぎに注意",
+    "safety": {
+      "gokun": { "level": "ok", "sizeGuidance": "すりつぶしてペースト状にする" },
+      "mogumogu": { "level": "ok", "sizeGuidance": "フォークでつぶす" },
+      "kamikamu": { "level": "ok", "sizeGuidance": "5mm厚程度に切る" },
+      "pakupaku": { "level": "ok", "sizeGuidance": "1cm厚程度に切る" }
+    }
+  },
+  {
+    "id": "strawberry",
+    "nameJP": "いちご",
+    "nameEN": "Strawberry",
+    "category": "fruit",
+    "allergen": false,
+    "notes": "種が気になる場合は裏ごしする",
+    "safety": {
+      "gokun": { "level": "ok", "sizeGuidance": "裏ごしてペースト状にする" },
+      "mogumogu": { "level": "ok", "sizeGuidance": "細かく刻むかすりつぶす" },
+      "kamikamu": { "level": "ok", "sizeGuidance": "4等分程度に切る" },
+      "pakupaku": { "level": "ok", "sizeGuidance": "2〜3等分に切る" }
+    }
+  },
+  {
+    "id": "egg_yolk",
+    "nameJP": "卵黄",
+    "nameEN": "Egg Yolk",
+    "category": "protein",
+    "allergen": true,
+    "notes": "卵アレルギーの主要抗原。固ゆでにして少量ずつ始める",
+    "safety": {
+      "gokun": { "level": "ok", "sizeGuidance": "固ゆで卵の卵黄をすりつぶしてペースト状に（耳かき1杯から）" },
+      "mogumogu": { "level": "ok", "sizeGuidance": "固ゆで卵の卵黄" },
+      "kamikamu": { "level": "ok", "sizeGuidance": "全卵使用可" },
+      "pakupaku": { "level": "ok", "sizeGuidance": "全卵使用可" }
+    }
+  },
+  {
+    "id": "egg_whole",
+    "nameJP": "全卵",
+    "nameEN": "Whole Egg",
+    "category": "protein",
+    "allergen": true,
+    "notes": "卵白は卵黄よりアレルギーが出やすい。卵黄に慣れてから",
+    "safety": {
+      "gokun": { "level": "prohibited", "prohibitionReason": "卵白はゴックン期には与えない。まず卵黄から始める" },
+      "mogumogu": { "level": "caution", "sizeGuidance": "卵黄に慣れたら全卵を少量から。必ず加熱する" },
+      "kamikamu": { "level": "ok", "sizeGuidance": "しっかり加熱して使用する" },
+      "pakupaku": { "level": "ok", "sizeGuidance": "しっかり加熱して使用する" }
+    }
+  },
+  {
+    "id": "raw_egg",
+    "nameJP": "生卵・半熟卵",
+    "nameEN": "Raw Egg",
+    "category": "protein",
+    "allergen": true,
+    "notes": "1歳以降も与えないことを推奨",
+    "safety": {
+      "gokun": { "level": "prohibited", "prohibitionReason": "サルモネラ菌感染のリスク。必ず加熱すること" },
+      "mogumogu": { "level": "prohibited", "prohibitionReason": "サルモネラ菌感染のリスク。必ず加熱すること" },
+      "kamikamu": { "level": "prohibited", "prohibitionReason": "サルモネラ菌感染のリスク。必ず加熱すること" },
+      "pakupaku": { "level": "caution", "prohibitionReason": "サルモネラ菌のリスク。できるだけ加熱を推奨" }
+    }
+  },
+  {
+    "id": "tofu",
+    "nameJP": "豆腐",
+    "nameEN": "Tofu",
+    "category": "protein",
+    "allergen": true,
+    "notes": "大豆アレルギーに注意。絹ごし豆腐が使いやすい",
+    "safety": {
+      "gokun": { "level": "ok", "sizeGuidance": "茹でてすりつぶしペースト状にする" },
+      "mogumogu": { "level": "ok", "sizeGuidance": "3mm角程度にする（生でも可）" },
+      "kamikamu": { "level": "ok", "sizeGuidance": "5mm角程度" },
+      "pakupaku": { "level": "ok", "sizeGuidance": "1cm角程度" }
+    }
+  },
+  {
+    "id": "chicken",
+    "nameJP": "鶏ささみ・鶏ひき肉",
+    "nameEN": "Chicken",
+    "category": "protein",
+    "allergen": false,
+    "notes": "脂肪の少ない部位から始める",
+    "safety": {
+      "gokun": { "level": "prohibited", "prohibitionReason": "ゴックン期は肉類はまだ早い" },
+      "mogumogu": { "level": "ok", "sizeGuidance": "ひき肉をしっかり加熱してすりつぶす" },
+      "kamikamu": { "level": "ok", "sizeGuidance": "ひき肉や細かく刻んだ肉をしっかり加熱" },
+      "pakupaku": { "level": "ok", "sizeGuidance": "1cm角程度に切ってしっかり加熱" }
+    }
+  },
+  {
+    "id": "cod",
+    "nameJP": "たら（白身魚）",
+    "nameEN": "Cod",
+    "category": "fish",
+    "allergen": false,
+    "notes": "骨を完全に除いて使用する",
+    "safety": {
+      "gokun": { "level": "ok", "sizeGuidance": "骨を除いてゆでてすりつぶす" },
+      "mogumogu": { "level": "ok", "sizeGuidance": "骨を除いて3mm程度にほぐす" },
+      "kamikamu": { "level": "ok", "sizeGuidance": "骨を除いて5mm程度にほぐす" },
+      "pakupaku": { "level": "ok", "sizeGuidance": "骨を除いて1cm程度に切る" }
+    }
+  },
+  {
+    "id": "salmon",
+    "nameJP": "鮭",
+    "nameEN": "Salmon",
+    "category": "fish",
+    "allergen": false,
+    "notes": "骨を完全に除く。生鮭（塩鮭でない）を使用する",
+    "safety": {
+      "gokun": { "level": "prohibited", "prohibitionReason": "ゴックン期はまだ早い。白身魚から始める" },
+      "mogumogu": { "level": "ok", "sizeGuidance": "骨を除いてゆでてほぐす" },
+      "kamikamu": { "level": "ok", "sizeGuidance": "骨を除いて5mm程度にほぐす" },
+      "pakupaku": { "level": "ok", "sizeGuidance": "骨を除いて1cm程度に切る" }
+    }
+  },
+  {
+    "id": "tuna_canned",
+    "nameJP": "ツナ缶（水煮）",
+    "nameEN": "Canned Tuna",
+    "category": "fish",
+    "allergen": false,
+    "notes": "食塩無添加・水煮のものを使用。油漬けは避ける",
+    "safety": {
+      "gokun": { "level": "prohibited", "prohibitionReason": "ゴックン期はまだ早い" },
+      "mogumogu": { "level": "ok", "sizeGuidance": "湯通ししてほぐす" },
+      "kamikamu": { "level": "ok", "sizeGuidance": "湯通ししてほぐす" },
+      "pakupaku": { "level": "ok", "sizeGuidance": "湯通ししてほぐす" }
+    }
+  },
+  {
+    "id": "milk_as_drink",
+    "nameJP": "牛乳（飲み物として）",
+    "nameEN": "Cow's Milk (as drink)",
+    "category": "dairy",
+    "allergen": true,
+    "notes": "1歳未満は飲み物としての牛乳は不可。料理に使う少量は可",
+    "safety": {
+      "gokun": { "level": "prohibited", "prohibitionReason": "腎臓への負担が大きく、消化器系が未発達のため不可" },
+      "mogumogu": { "level": "prohibited", "prohibitionReason": "1歳未満は飲み物として与えない" },
+      "kamikamu": { "level": "prohibited", "prohibitionReason": "1歳未満は飲み物として与えない" },
+      "pakupaku": { "level": "ok", "sizeGuidance": "1歳以降は飲み物として与えられる" }
+    }
+  },
+  {
+    "id": "yogurt",
+    "nameJP": "ヨーグルト（無糖）",
+    "nameEN": "Plain Yogurt",
+    "category": "dairy",
+    "allergen": true,
+    "notes": "無糖・プレーンを選ぶ。乳アレルギーに注意",
+    "safety": {
+      "gokun": { "level": "ok", "sizeGuidance": "プレーンヨーグルトをそのまま少量から" },
+      "mogumogu": { "level": "ok", "sizeGuidance": "フルーツなどと混ぜて与えてもよい" },
+      "kamikamu": { "level": "ok", "sizeGuidance": "そのまま与えられる" },
+      "pakupaku": { "level": "ok", "sizeGuidance": "そのまま与えられる" }
+    }
+  },
+  {
+    "id": "cheese",
+    "nameJP": "粉チーズ・カッテージチーズ",
+    "nameEN": "Cheese",
+    "category": "dairy",
+    "allergen": true,
+    "notes": "塩分が多いので少量にする",
+    "safety": {
+      "gokun": { "level": "ok", "sizeGuidance": "粉チーズを少量料理にかける" },
+      "mogumogu": { "level": "ok", "sizeGuidance": "少量使用" },
+      "kamikamu": { "level": "ok", "sizeGuidance": "少量使用" },
+      "pakupaku": { "level": "ok", "sizeGuidance": "少量使用" }
+    }
+  },
+  {
+    "id": "honey",
+    "nameJP": "はちみつ",
+    "nameEN": "Honey",
+    "category": "other",
+    "allergen": false,
+    "notes": "1歳未満には絶対に与えてはいけない",
+    "safety": {
+      "gokun": { "level": "prohibited", "prohibitionReason": "ボツリヌス菌による乳児ボツリヌス症のリスク。1歳未満は絶対NG" },
+      "mogumogu": { "level": "prohibited", "prohibitionReason": "ボツリヌス菌による乳児ボツリヌス症のリスク。1歳未満は絶対NG" },
+      "kamikamu": { "level": "prohibited", "prohibitionReason": "ボツリヌス菌による乳児ボツリヌス症のリスク。1歳未満は絶対NG" },
+      "pakupaku": { "level": "ok", "sizeGuidance": "1歳以降は与えることができる" }
+    }
+  },
+  {
+    "id": "soba",
+    "nameJP": "そば",
+    "nameEN": "Buckwheat",
+    "category": "grain",
+    "allergen": true,
+    "notes": "アレルギー症状が強く出ることがある。初めて与える際は特に慎重に",
+    "safety": {
+      "gokun": { "level": "prohibited", "prohibitionReason": "アレルギーリスクが高い。ゴックン期は与えない" },
+      "mogumogu": { "level": "prohibited", "prohibitionReason": "アレルギーリスクが高い。1歳以降から慎重に" },
+      "kamikamu": { "level": "caution", "prohibitionReason": "アレルギーリスクあり。初めて与える際は少量から。症状が出たらすぐ受診" },
+      "pakupaku": { "level": "caution", "prohibitionReason": "アレルギーリスクあり。少量から始めて様子を見る" }
+    }
+  },
+  {
+    "id": "nuts",
+    "nameJP": "ナッツ類（くるみ・ピーナッツなど）",
+    "nameEN": "Nuts",
+    "category": "other",
+    "allergen": true,
+    "notes": "強いアレルゲン。粒のままは窒息リスクもあり",
+    "safety": {
+      "gokun": { "level": "prohibited", "prohibitionReason": "アレルギーリスクと窒息リスク。与えてはいけない" },
+      "mogumogu": { "level": "prohibited", "prohibitionReason": "アレルギーリスクと窒息リスク。与えてはいけない" },
+      "kamikamu": { "level": "prohibited", "prohibitionReason": "窒息リスクが高い。粉末やペースト状でも慎重に" },
+      "pakupaku": { "level": "caution", "prohibitionReason": "粒のままは窒息リスクあり。ペースト状や粉末ならアレルギー確認のうえ少量から" }
+    }
+  },
+  {
+    "id": "shellfish",
+    "nameJP": "貝類（あさり・ほたてなど）",
+    "nameEN": "Shellfish",
+    "category": "fish",
+    "allergen": true,
+    "notes": "アレルギーが出やすい。初めて与える際は慎重に",
+    "safety": {
+      "gokun": { "level": "prohibited", "prohibitionReason": "アレルギーリスクが高い。ゴックン期は与えない" },
+      "mogumogu": { "level": "caution", "sizeGuidance": "細かく刻み少量から。アレルギー反応に注意" },
+      "kamikamu": { "level": "caution", "sizeGuidance": "細かく刻み少量から" },
+      "pakupaku": { "level": "ok", "sizeGuidance": "しっかり加熱して与える" }
+    }
+  },
+  {
+    "id": "salt",
+    "nameJP": "塩・醤油",
+    "nameEN": "Salt / Soy sauce",
+    "category": "seasoning",
+    "allergen": false,
+    "notes": "腎臓の負担になるため極力使わない。使っても少量（小さじ1/5未満）",
+    "safety": {
+      "gokun": { "level": "prohibited", "prohibitionReason": "調味料は使わない。食材本来の味で与える" },
+      "mogumogu": { "level": "caution", "sizeGuidance": "ごく少量のみ（風味づけ程度）" },
+      "kamikamu": { "level": "caution", "sizeGuidance": "少量のみ" },
+      "pakupaku": { "level": "caution", "sizeGuidance": "大人の1/3〜1/2程度の薄味" }
+    }
+  },
+  {
+    "id": "sugar",
+    "nameJP": "砂糖",
+    "nameEN": "Sugar",
+    "category": "seasoning",
+    "allergen": false,
+    "notes": "甘味に依存しやすい。果物の自然な甘味で代用できる",
+    "safety": {
+      "gokun": { "level": "prohibited", "prohibitionReason": "調味料は使わない" },
+      "mogumogu": { "level": "caution", "sizeGuidance": "使わないのが理想。使う場合はごく少量" },
+      "kamikamu": { "level": "caution", "sizeGuidance": "少量のみ" },
+      "pakupaku": { "level": "caution", "sizeGuidance": "少量のみ" }
+    }
+  },
+  {
+    "id": "butter",
+    "nameJP": "バター（無塩）",
+    "nameEN": "Unsalted Butter",
+    "category": "dairy",
+    "allergen": true,
+    "notes": "乳アレルギーに注意。有塩バターは使わない",
+    "safety": {
+      "gokun": { "level": "ok", "sizeGuidance": "少量（小さじ1/2程度）をお粥に混ぜる" },
+      "mogumogu": { "level": "ok", "sizeGuidance": "少量使用" },
+      "kamikamu": { "level": "ok", "sizeGuidance": "少量使用" },
+      "pakupaku": { "level": "ok", "sizeGuidance": "少量使用" }
+    }
+  },
+  {
+    "id": "olive_oil",
+    "nameJP": "オリーブオイル",
+    "nameEN": "Olive Oil",
+    "category": "seasoning",
+    "allergen": false,
+    "safety": {
+      "gokun": { "level": "ok", "sizeGuidance": "少量（小さじ1/4程度）" },
+      "mogumogu": { "level": "ok", "sizeGuidance": "少量使用" },
+      "kamikamu": { "level": "ok", "sizeGuidance": "少量使用" },
+      "pakupaku": { "level": "ok", "sizeGuidance": "少量使用" }
+    }
+  },
+  {
+    "id": "wakame",
+    "nameJP": "わかめ",
+    "nameEN": "Wakame",
+    "category": "seaweed",
+    "allergen": false,
+    "notes": "塩抜きをしてから使用する。細かく刻む",
+    "safety": {
+      "gokun": { "level": "prohibited", "prohibitionReason": "消化が難しい。ゴックン期は与えない" },
+      "mogumogu": { "level": "caution", "sizeGuidance": "塩抜きして細かく刻む（1〜2mm程度）" },
+      "kamikamu": { "level": "ok", "sizeGuidance": "塩抜きして細かく刻む" },
+      "pakupaku": { "level": "ok", "sizeGuidance": "塩抜きして刻む" }
+    }
+  },
+  {
+    "id": "nori",
+    "nameJP": "海苔",
+    "nameEN": "Nori",
+    "category": "seaweed",
+    "allergen": false,
+    "notes": "のどに張り付くリスクがあるので細かくちぎる",
+    "safety": {
+      "gokun": { "level": "prohibited", "prohibitionReason": "のどに張り付く危険性がある" },
+      "mogumogu": { "level": "caution", "sizeGuidance": "細かくちぎってお粥などに混ぜる" },
+      "kamikamu": { "level": "caution", "sizeGuidance": "細かくちぎって使う" },
+      "pakupaku": { "level": "ok", "sizeGuidance": "小さくちぎって与える" }
+    }
+  },
+  {
+    "id": "milk_in_cooking",
+    "nameJP": "牛乳（料理用）",
+    "nameEN": "Milk (cooking)",
+    "category": "dairy",
+    "allergen": true,
+    "notes": "乳アレルギーに注意。料理に使う少量は可",
+    "safety": {
+      "gokun": { "level": "ok", "sizeGuidance": "パンがゆや料理に少量混ぜる（加熱して使う）" },
+      "mogumogu": { "level": "ok", "sizeGuidance": "料理に使用可（加熱すること）" },
+      "kamikamu": { "level": "ok", "sizeGuidance": "料理に使用可" },
+      "pakupaku": { "level": "ok", "sizeGuidance": "料理・飲み物として使用可" }
+    }
+  },
+  {
+    "id": "formula",
+    "nameJP": "粉ミルク",
+    "nameEN": "Formula",
+    "category": "dairy",
+    "allergen": false,
+    "notes": "料理に使用できる",
+    "safety": {
+      "gokun": { "level": "ok", "sizeGuidance": "お粥や料理に使用可" },
+      "mogumogu": { "level": "ok", "sizeGuidance": "料理に使用可" },
+      "kamikamu": { "level": "ok", "sizeGuidance": "料理に使用可" },
+      "pakupaku": { "level": "ok", "sizeGuidance": "料理に使用可" }
+    }
+  },
+  {
+    "id": "dashi_kombu",
+    "nameJP": "昆布だし",
+    "nameEN": "Kombu Dashi",
+    "category": "seasoning",
+    "allergen": false,
+    "notes": "市販のだしは塩分が含まれるので手作りがベスト",
+    "safety": {
+      "gokun": { "level": "ok", "sizeGuidance": "薄いだし汁として使用" },
+      "mogumogu": { "level": "ok", "sizeGuidance": "だしとして使用" },
+      "kamikamu": { "level": "ok", "sizeGuidance": "だしとして使用" },
+      "pakupaku": { "level": "ok", "sizeGuidance": "だしとして使用" }
+    }
+  },
+  {
+    "id": "dashi_katsuobushi",
+    "nameJP": "かつおだし",
+    "nameEN": "Katsuobushi Dashi",
+    "category": "seasoning",
+    "allergen": false,
+    "safety": {
+      "gokun": { "level": "ok", "sizeGuidance": "薄いだし汁として使用" },
+      "mogumogu": { "level": "ok", "sizeGuidance": "だしとして使用" },
+      "kamikamu": { "level": "ok", "sizeGuidance": "だしとして使用" },
+      "pakupaku": { "level": "ok", "sizeGuidance": "だしとして使用" }
+    }
+  },
+  {
+    "id": "edamame",
+    "nameJP": "枝豆",
+    "nameEN": "Edamame",
+    "category": "protein",
+    "allergen": true,
+    "notes": "大豆アレルギーに注意。薄皮を除く",
+    "safety": {
+      "gokun": { "level": "prohibited", "prohibitionReason": "窒息リスクと消化の問題。ゴックン期は与えない" },
+      "mogumogu": { "level": "caution", "sizeGuidance": "薄皮を除いてすりつぶす" },
+      "kamikamu": { "level": "caution", "sizeGuidance": "薄皮を除いて細かく刻む" },
+      "pakupaku": { "level": "ok", "sizeGuidance": "薄皮を除いて与える" }
+    }
+  },
+  {
+    "id": "natto",
+    "nameJP": "納豆",
+    "nameEN": "Natto",
+    "category": "protein",
+    "allergen": true,
+    "notes": "大豆アレルギーに注意。タレは使わない",
+    "safety": {
+      "gokun": { "level": "prohibited", "prohibitionReason": "ゴックン期は豆類はまだ早い" },
+      "mogumogu": { "level": "ok", "sizeGuidance": "細かく刻んでお粥に混ぜる（タレなし）" },
+      "kamikamu": { "level": "ok", "sizeGuidance": "細かく刻む（タレなし）" },
+      "pakupaku": { "level": "ok", "sizeGuidance": "タレは少量のみ" }
+    }
+  },
+  {
+    "id": "avocado",
+    "nameJP": "アボカド",
+    "nameEN": "Avocado",
+    "category": "fruit",
+    "allergen": false,
+    "notes": "脂質が多い。少量から始める",
+    "safety": {
+      "gokun": { "level": "caution", "sizeGuidance": "少量すりつぶして与える" },
+      "mogumogu": { "level": "ok", "sizeGuidance": "3mm角に切るかすりつぶす" },
+      "kamikamu": { "level": "ok", "sizeGuidance": "5mm角程度" },
+      "pakupaku": { "level": "ok", "sizeGuidance": "1cm角程度" }
+    }
+  },
+  {
+    "id": "asparagus",
+    "nameJP": "アスパラガス",
+    "nameEN": "Asparagus",
+    "category": "vegetable",
+    "allergen": false,
+    "notes": "穂先のやわらかい部分を使用する",
+    "safety": {
+      "gokun": { "level": "ok", "sizeGuidance": "穂先のみやわらかく茹でてすりつぶす" },
+      "mogumogu": { "level": "ok", "sizeGuidance": "穂先を細かく刻む（3mm程度）" },
+      "kamikamu": { "level": "ok", "sizeGuidance": "5mm程度に切る" },
+      "pakupaku": { "level": "ok", "sizeGuidance": "1cm程度に切る" }
+    }
+  },
+  {
+    "id": "eggplant",
+    "nameJP": "なす",
+    "nameEN": "Eggplant",
+    "category": "vegetable",
+    "allergen": false,
+    "notes": "皮を除いてしっかり加熱する",
+    "safety": {
+      "gokun": { "level": "ok", "sizeGuidance": "皮を除いてやわらかく加熱してすりつぶす" },
+      "mogumogu": { "level": "ok", "sizeGuidance": "皮を除いて3mm角に切る" },
+      "kamikamu": { "level": "ok", "sizeGuidance": "5mm角程度" },
+      "pakupaku": { "level": "ok", "sizeGuidance": "1cm角程度" }
+    }
+  },
+  {
+    "id": "mushroom",
+    "nameJP": "しいたけ・エリンギ",
+    "nameEN": "Mushroom",
+    "category": "vegetable",
+    "allergen": false,
+    "notes": "よく加熱して細かく刻む",
+    "safety": {
+      "gokun": { "level": "prohibited", "prohibitionReason": "消化しにくい。ゴックン期は与えない" },
+      "mogumogu": { "level": "caution", "sizeGuidance": "やわらかく煮て細かく刻む（2mm程度）" },
+      "kamikamu": { "level": "ok", "sizeGuidance": "細かく刻む（5mm程度）" },
+      "pakupaku": { "level": "ok", "sizeGuidance": "1cm程度に切る" }
+    }
+  }
+]

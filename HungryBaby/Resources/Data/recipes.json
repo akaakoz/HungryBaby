@@ -1,0 +1,425 @@
+[
+  {
+    "id": "rice_porridge_10x",
+    "nameJP": "10倍粥（基本）",
+    "descriptionJP": "離乳食の基本中の基本。なめらかに仕上げて最初の一口に",
+    "stages": ["gokun"],
+    "cookingTimeMinutes": 20,
+    "difficulty": "easy",
+    "kurashiruID": null,
+    "steps": [
+      "米を洗い、水に30分浸す",
+      "米1：水10の割合で鍋に入れる",
+      "強火で沸騰させ、弱火で20分炊く",
+      "ブレンダーやすりこぎでなめらかにすりつぶす",
+      "裏ごしして粒をなくす"
+    ],
+    "tags": ["基本", "ゴックン期", "冷凍OK"],
+    "ingredients": [
+      { "ingredientID": "rice", "quantity": "大さじ1（米）" }
+    ]
+  },
+  {
+    "id": "pumpkin_puree",
+    "nameJP": "かぼちゃのペースト",
+    "descriptionJP": "甘くてなめらか、初めての野菜にぴったり",
+    "stages": ["gokun", "mogumogu"],
+    "cookingTimeMinutes": 10,
+    "difficulty": "easy",
+    "kurashiruID": null,
+    "steps": [
+      "かぼちゃの皮・種・ワタを取り除く",
+      "1cm角に切ってラップをして電子レンジで2〜3分加熱",
+      "フォークでつぶしてなめらかにする",
+      "ゴックン期はだし汁でのばしてペースト状に",
+      "モグモグ期は粒が少し残る程度"
+    ],
+    "tags": ["野菜", "冷凍OK", "電子レンジ"],
+    "ingredients": [
+      { "ingredientID": "pumpkin", "quantity": "30g" }
+    ]
+  },
+  {
+    "id": "sweet_potato_puree",
+    "nameJP": "さつまいものペースト",
+    "descriptionJP": "自然な甘みで赤ちゃんが大好きな味",
+    "stages": ["gokun", "mogumogu"],
+    "cookingTimeMinutes": 15,
+    "difficulty": "easy",
+    "kurashiruID": null,
+    "steps": [
+      "さつまいもの皮をむき、1cm角に切る",
+      "水に5分さらしてアクを抜く",
+      "鍋でやわらかくなるまで茹でる（約10分）",
+      "お湯を切り、すりつぶす",
+      "ゴックン期はだし汁でのばしてなめらかに"
+    ],
+    "tags": ["野菜", "冷凍OK"],
+    "ingredients": [
+      { "ingredientID": "sweet_potato", "quantity": "30g" }
+    ]
+  },
+  {
+    "id": "carrot_puree",
+    "nameJP": "にんじんのペースト",
+    "descriptionJP": "β-カロテン豊富。下茹でして冷凍ストックがおすすめ",
+    "stages": ["gokun", "mogumogu"],
+    "cookingTimeMinutes": 15,
+    "difficulty": "easy",
+    "kurashiruID": null,
+    "steps": [
+      "にんじんの皮をむき、薄切りにする",
+      "やわらかくなるまで茹でる（約10〜15分）",
+      "フォークやすりこぎでつぶす",
+      "ゴックン期は裏ごして湯でのばす"
+    ],
+    "tags": ["野菜", "冷凍OK"],
+    "ingredients": [
+      { "ingredientID": "carrot", "quantity": "30g" }
+    ]
+  },
+  {
+    "id": "tofu_ankake",
+    "nameJP": "豆腐のあんかけ",
+    "descriptionJP": "とろみがつきやすく飲み込みやすい。たんぱく質補給に",
+    "stages": ["gokun", "mogumogu"],
+    "cookingTimeMinutes": 10,
+    "difficulty": "easy",
+    "kurashiruID": null,
+    "steps": [
+      "絹ごし豆腐30gを茹でる（1分程度）",
+      "昆布だし50mlを小鍋で温める",
+      "豆腐をつぶしてだし汁に加える",
+      "水溶き片栗粉（片栗粉少量）でとろみをつける",
+      "粗熱をとって与える"
+    ],
+    "tags": ["たんぱく質", "冷凍NG"],
+    "ingredients": [
+      { "ingredientID": "tofu", "quantity": "30g" },
+      { "ingredientID": "dashi_kombu", "quantity": "50ml" }
+    ]
+  },
+  {
+    "id": "bread_porridge",
+    "nameJP": "パンがゆ",
+    "descriptionJP": "ミルク風味でまろやか。お粥に飽きたときに",
+    "stages": ["gokun", "mogumogu"],
+    "cookingTimeMinutes": 5,
+    "difficulty": "easy",
+    "kurashiruID": null,
+    "steps": [
+      "食パン（耳なし）を細かくちぎる",
+      "粉ミルクまたは水50mlと一緒に小鍋に入れる",
+      "弱火でとろりとするまで煮る（約3分）",
+      "なめらかになったら粗熱をとる"
+    ],
+    "tags": ["穀物", "冷凍OK", "時短"],
+    "ingredients": [
+      { "ingredientID": "bread", "quantity": "8枚切り1/4枚" },
+      { "ingredientID": "formula", "quantity": "50ml" }
+    ]
+  },
+  {
+    "id": "potato_carrot_mash",
+    "nameJP": "じゃがいもにんじんマッシュ",
+    "descriptionJP": "野菜の甘みが広がる定番おかず",
+    "stages": ["mogumogu", "kamikamu"],
+    "cookingTimeMinutes": 15,
+    "difficulty": "easy",
+    "kurashiruID": null,
+    "steps": [
+      "じゃがいも・にんじんを皮むいて小さく切る",
+      "やわらかくなるまで茹でる（約12分）",
+      "湯を切り、フォークでつぶす",
+      "モグモグ期：なめらかにつぶす",
+      "カミカミ期：粗くつぶして5mm程度の粒を残す"
+    ],
+    "tags": ["野菜", "冷凍OK"],
+    "ingredients": [
+      { "ingredientID": "potato", "quantity": "30g" },
+      { "ingredientID": "carrot", "quantity": "20g" }
+    ]
+  },
+  {
+    "id": "spinach_egg_porridge",
+    "nameJP": "ほうれん草と卵黄のお粥",
+    "descriptionJP": "栄養バランスがよい。はじめての卵黄入れにおすすめ",
+    "stages": ["mogumogu"],
+    "cookingTimeMinutes": 15,
+    "difficulty": "easy",
+    "kurashiruID": null,
+    "steps": [
+      "7倍粥を作る",
+      "ほうれん草をやわらかく茹でてアクを取り、細かく刻む",
+      "卵を固ゆでにして（12分）卵黄を取り出す",
+      "お粥にほうれん草と卵黄を混ぜる",
+      "卵黄は耳かき1杯程度から始め、様子を見ながら増やす"
+    ],
+    "tags": ["野菜", "たんぱく質", "冷凍NG"],
+    "ingredients": [
+      { "ingredientID": "rice", "quantity": "7倍粥 80g" },
+      { "ingredientID": "spinach", "quantity": "葉先10g" },
+      { "ingredientID": "egg_yolk", "quantity": "卵黄1/4個分" }
+    ]
+  },
+  {
+    "id": "udon_soup",
+    "nameJP": "やわらかうどんのだし煮",
+    "descriptionJP": "茹でてしっかり刻んで食べやすく",
+    "stages": ["mogumogu", "kamikamu"],
+    "cookingTimeMinutes": 10,
+    "difficulty": "easy",
+    "kurashiruID": null,
+    "steps": [
+      "うどんをやわらかくなるまで茹でる（10分程度）",
+      "冷水で洗い塩分を落とす",
+      "月齢に合わせた大きさに刻む（モグモグ：2〜3mm、カミカミ：5mm）",
+      "昆布だし50mlで煮る"
+    ],
+    "tags": ["穀物", "冷凍OK", "時短"],
+    "ingredients": [
+      { "ingredientID": "udon", "quantity": "50g（茹で）" },
+      { "ingredientID": "dashi_kombu", "quantity": "50ml" }
+    ]
+  },
+  {
+    "id": "chicken_vegetable_soup",
+    "nameJP": "鶏ひき肉と野菜のスープ",
+    "descriptionJP": "肉のうまみと野菜の甘みで食べごたえあり",
+    "stages": ["mogumogu", "kamikamu", "pakupaku"],
+    "cookingTimeMinutes": 15,
+    "difficulty": "easy",
+    "kurashiruID": null,
+    "steps": [
+      "鶏ひき肉を細かくほぐしながらだし汁で煮る",
+      "にんじん・玉ねぎをみじん切りにする",
+      "野菜を加えてやわらかくなるまで煮る（10分）",
+      "月齢に合わせて大きさを調整する"
+    ],
+    "tags": ["たんぱく質", "野菜", "冷凍OK"],
+    "ingredients": [
+      { "ingredientID": "chicken", "quantity": "15g" },
+      { "ingredientID": "carrot", "quantity": "20g" },
+      { "ingredientID": "onion", "quantity": "15g" },
+      { "ingredientID": "dashi_katsuobushi", "quantity": "100ml" }
+    ]
+  },
+  {
+    "id": "salmon_vegetable_porridge",
+    "nameJP": "鮭と野菜のお粥",
+    "descriptionJP": "鮭のDHAが豊富。彩りもきれい",
+    "stages": ["mogumogu", "kamikamu"],
+    "cookingTimeMinutes": 15,
+    "difficulty": "medium",
+    "kurashiruID": null,
+    "steps": [
+      "鮭を塩抜きしてしっかり加熱し、骨を丁寧に取り除く",
+      "身をほぐして細かくする",
+      "にんじん・ブロッコリーを小さく切ってやわらかく茹でる",
+      "お粥に混ぜ合わせる"
+    ],
+    "tags": ["魚", "野菜", "冷凍OK"],
+    "ingredients": [
+      { "ingredientID": "salmon", "quantity": "10g" },
+      { "ingredientID": "rice", "quantity": "お粥80g" },
+      { "ingredientID": "carrot", "quantity": "15g" },
+      { "ingredientID": "broccoli", "quantity": "15g" }
+    ]
+  },
+  {
+    "id": "natto_rice",
+    "nameJP": "納豆ご飯（離乳食用）",
+    "descriptionJP": "栄養満点の納豆をお粥に混ぜて食べやすく",
+    "stages": ["mogumogu", "kamikamu", "pakupaku"],
+    "cookingTimeMinutes": 5,
+    "difficulty": "easy",
+    "kurashiruID": null,
+    "steps": [
+      "納豆を細かく刻む（タレは使わない）",
+      "お粥に混ぜる",
+      "カミカミ期以降：軟飯に混ぜる",
+      "仕上げにかつおだしを少量加えると食べやすい"
+    ],
+    "tags": ["たんぱく質", "時短", "冷凍NG"],
+    "ingredients": [
+      { "ingredientID": "natto", "quantity": "小さじ1〜2" },
+      { "ingredientID": "rice", "quantity": "お粥80g" }
+    ]
+  },
+  {
+    "id": "broccoli_cheese_soup",
+    "nameJP": "ブロッコリーのミルクスープ",
+    "descriptionJP": "ミルクの優しい甘みとブロッコリーが相性抜群",
+    "stages": ["kamikamu", "pakupaku"],
+    "cookingTimeMinutes": 10,
+    "difficulty": "easy",
+    "kurashiruID": null,
+    "steps": [
+      "ブロッコリーを小さく切ってやわらかく茹でる",
+      "鍋に粉ミルク（または牛乳 パクパク期）と水を入れて温める",
+      "ブロッコリーを加える",
+      "仕上げに粉チーズを少量加える"
+    ],
+    "tags": ["野菜", "乳製品", "時短"],
+    "ingredients": [
+      { "ingredientID": "broccoli", "quantity": "30g" },
+      { "ingredientID": "milk_in_cooking", "quantity": "50ml" },
+      { "ingredientID": "cheese", "quantity": "少量" }
+    ]
+  },
+  {
+    "id": "tuna_potato_salad",
+    "nameJP": "ツナとじゃがいものサラダ風",
+    "descriptionJP": "ツナのうまみとじゃがいもでボリューム満点",
+    "stages": ["kamikamu", "pakupaku"],
+    "cookingTimeMinutes": 15,
+    "difficulty": "easy",
+    "kurashiruID": null,
+    "steps": [
+      "ツナ缶（水煮）を湯通しして塩分を落とす",
+      "じゃがいもをやわらかく茹でてつぶす",
+      "にんじんをやわらかく茹でて小さく切る",
+      "ツナ・じゃがいも・にんじんを和える",
+      "プレーンヨーグルトを少量加えてまとめる（任意）"
+    ],
+    "tags": ["魚", "野菜", "冷凍NG"],
+    "ingredients": [
+      { "ingredientID": "tuna_canned", "quantity": "10g" },
+      { "ingredientID": "potato", "quantity": "40g" },
+      { "ingredientID": "carrot", "quantity": "15g" }
+    ]
+  },
+  {
+    "id": "banana_yogurt",
+    "nameJP": "バナナヨーグルト",
+    "descriptionJP": "切って混ぜるだけ！おやつにも主食にも",
+    "stages": ["gokun", "mogumogu", "kamikamu", "pakupaku"],
+    "cookingTimeMinutes": 3,
+    "difficulty": "easy",
+    "kurashiruID": null,
+    "steps": [
+      "バナナを月齢に合わせた大きさにつぶすか切る",
+      "プレーンヨーグルトと混ぜる",
+      "ゴックン期：バナナをすりつぶしてヨーグルトと混ぜる",
+      "モグモグ期以降：フォークでつぶしたバナナと混ぜる"
+    ],
+    "tags": ["果物", "乳製品", "時短", "冷凍NG"],
+    "ingredients": [
+      { "ingredientID": "banana", "quantity": "1/4本" },
+      { "ingredientID": "yogurt", "quantity": "大さじ2" }
+    ]
+  },
+  {
+    "id": "egg_tofu_gratin",
+    "nameJP": "卵と豆腐のグラタン風",
+    "descriptionJP": "やわらかくてふわふわ。カミカミ期からOK",
+    "stages": ["kamikamu", "pakupaku"],
+    "cookingTimeMinutes": 15,
+    "difficulty": "medium",
+    "kurashiruID": null,
+    "steps": [
+      "絹ごし豆腐・卵・粉ミルクをボウルで混ぜる",
+      "野菜（ブロッコリー・にんじん）を小さく刻んで加える",
+      "グラタン皿に流し込む",
+      "トースターまたはオーブンで15分焼く",
+      "粉チーズを少量かけてもよい"
+    ],
+    "tags": ["たんぱく質", "野菜", "冷凍OK"],
+    "ingredients": [
+      { "ingredientID": "tofu", "quantity": "50g" },
+      { "ingredientID": "egg_whole", "quantity": "1個", "stageNotes": "カミカミ期からOK" },
+      { "ingredientID": "broccoli", "quantity": "20g" },
+      { "ingredientID": "carrot", "quantity": "15g" },
+      { "ingredientID": "formula", "quantity": "大さじ1" }
+    ]
+  },
+  {
+    "id": "pumpkin_soup",
+    "nameJP": "かぼちゃのポタージュスープ",
+    "descriptionJP": "とろとろで飲みやすい。野菜嫌いの子にも",
+    "stages": ["gokun", "mogumogu", "kamikamu"],
+    "cookingTimeMinutes": 15,
+    "difficulty": "easy",
+    "kurashiruID": null,
+    "steps": [
+      "かぼちゃを皮・種・ワタを除いて切る",
+      "やわらかくなるまで茹でる",
+      "茹で汁と一緒にブレンダーにかけてなめらかにする",
+      "粉ミルクを加えてのばす",
+      "弱火で温めなおして完成"
+    ],
+    "tags": ["野菜", "冷凍OK"],
+    "ingredients": [
+      { "ingredientID": "pumpkin", "quantity": "50g" },
+      { "ingredientID": "formula", "quantity": "50ml" }
+    ]
+  },
+  {
+    "id": "stir_fried_vegetables",
+    "nameJP": "やわらか野菜炒め",
+    "descriptionJP": "さまざまな野菜を一度に摂れる便利おかず",
+    "stages": ["kamikamu", "pakupaku"],
+    "cookingTimeMinutes": 10,
+    "difficulty": "easy",
+    "kurashiruID": null,
+    "steps": [
+      "にんじん・玉ねぎ・ブロッコリーを5mm角に切る",
+      "フライパンにオリーブオイルを少量ひく",
+      "野菜を炒める",
+      "だし汁を加えてやわらかくなるまで蒸し炒めにする",
+      "味付けは醤油ごく少量のみ"
+    ],
+    "tags": ["野菜", "時短", "冷凍OK"],
+    "ingredients": [
+      { "ingredientID": "carrot", "quantity": "20g" },
+      { "ingredientID": "onion", "quantity": "20g" },
+      { "ingredientID": "broccoli", "quantity": "20g" },
+      { "ingredientID": "olive_oil", "quantity": "小さじ1/4" },
+      { "ingredientID": "dashi_katsuobushi", "quantity": "大さじ2" }
+    ]
+  },
+  {
+    "id": "mixed_rice_porridge",
+    "nameJP": "五目お粥",
+    "descriptionJP": "野菜・たんぱく質・炭水化物が一度にとれる定番メニュー",
+    "stages": ["mogumogu", "kamikamu", "pakupaku"],
+    "cookingTimeMinutes": 20,
+    "difficulty": "medium",
+    "kurashiruID": null,
+    "steps": [
+      "にんじん・玉ねぎ・ほうれん草をみじん切りにする",
+      "鶏ひき肉をだし汁でしっかり加熱する",
+      "野菜を加えてやわらかくなるまで煮る",
+      "お粥に混ぜ合わせる",
+      "モグモグ期：みじん切りをさらに細かく"
+    ],
+    "tags": ["基本", "野菜", "たんぱく質", "冷凍OK"],
+    "ingredients": [
+      { "ingredientID": "rice", "quantity": "お粥80g" },
+      { "ingredientID": "chicken", "quantity": "15g" },
+      { "ingredientID": "carrot", "quantity": "15g" },
+      { "ingredientID": "onion", "quantity": "10g" },
+      { "ingredientID": "spinach", "quantity": "葉先10g" }
+    ]
+  },
+  {
+    "id": "apple_compote",
+    "nameJP": "りんごのコンポート",
+    "descriptionJP": "やわらかく煮たりんごは甘みが増して食べやすい",
+    "stages": ["gokun", "mogumogu", "kamikamu", "pakupaku"],
+    "cookingTimeMinutes": 10,
+    "difficulty": "easy",
+    "kurashiruID": null,
+    "steps": [
+      "りんごの皮・芯・種を除いて薄切りにする",
+      "小鍋に入れて水大さじ2と一緒に蓋をして加熱",
+      "5〜7分煮てやわらかくする",
+      "ゴックン期：すりつぶしてペースト状に",
+      "モグモグ期以降：粗くつぶすか細かく切る"
+    ],
+    "tags": ["果物", "冷凍OK", "おやつ"],
+    "ingredients": [
+      { "ingredientID": "apple", "quantity": "1/4個" }
+    ]
+  }
+]
