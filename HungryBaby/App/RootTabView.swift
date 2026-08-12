@@ -10,10 +10,7 @@ struct RootTabView: View {
             Tab("月齢ガイド", systemImage: "calendar") {
                 AgeGuideView()
             }
-            Tab("食材サイズ", systemImage: "ruler") {
-                SizeGuideView()
-            }
-            Tab("レシピ", systemImage: "fork.knife") {
+Tab("レシピ", systemImage: "fork.knife") {
                 RecipeListView()
             }
             Tab("冷蔵庫", systemImage: "refrigerator") {
