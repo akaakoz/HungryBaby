@@ -3,6 +3,9 @@ import SwiftUI
 struct KurashiruLinkButton: View {
     let recipeID: String
 
+    /// クラシルのブランドカラー
+    private let kurashiruGreen = Color(red: 0.0, green: 0.722, blue: 0.420)
+
     var body: some View {
         Button {
             let url = KurashiruService.url(for: recipeID)
@@ -19,9 +22,13 @@ struct KurashiruLinkButton: View {
                     .foregroundStyle(.secondary)
             }
             .padding()
-            .background(.red.opacity(0.08))
-            .foregroundStyle(.red)
+            .background(kurashiruGreen.opacity(0.08))
+            .foregroundStyle(kurashiruGreen)
             .clipShape(RoundedRectangle(cornerRadius: 12))
+            .overlay(
+                RoundedRectangle(cornerRadius: 12)
+                    .stroke(kurashiruGreen.opacity(0.3), lineWidth: 1)
+            )
         }
         .buttonStyle(.plain)
     }

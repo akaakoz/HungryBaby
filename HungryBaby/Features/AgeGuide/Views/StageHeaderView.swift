@@ -24,8 +24,14 @@ struct StageHeaderView: View {
         }
         .padding()
         .frame(maxWidth: .infinity)
-        .background(stage.systemColor.gradient)
-        .clipShape(RoundedRectangle(cornerRadius: 14))
+        .background(
+            LinearGradient(
+                colors: [stage.systemColor, stage.systemColor.opacity(0.7)],
+                startPoint: .topLeading,
+                endPoint: .bottomTrailing
+            )
+        )
+        .clipShape(RoundedRectangle(cornerRadius: 12))
         .padding(.horizontal)
     }
 }
@@ -36,4 +42,5 @@ struct StageHeaderView: View {
             StageHeaderView(stage: stage)
         }
     }
+    .background(Color.appBackground)
 }

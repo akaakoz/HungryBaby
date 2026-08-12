@@ -61,11 +61,11 @@ private struct MatchedRecipeCardView: View {
                     if matched.isExactMatch {
                         Text("完全一致")
                             .font(.caption2.bold())
-                            .foregroundStyle(.green)
+                            .foregroundStyle(Color.appSafe)
                     }
                     Text("\(matched.matchCount)/\(matched.totalSelected)")
                         .font(.caption.bold())
-                        .foregroundStyle(.orange)
+                        .foregroundStyle(Color.appPrimary)
                 }
             }
 
@@ -76,7 +76,7 @@ private struct MatchedRecipeCardView: View {
                         .fill(.gray.opacity(0.15))
                         .frame(height: 6)
                     RoundedRectangle(cornerRadius: 4)
-                        .fill(matched.isExactMatch ? Color.green : Color.orange)
+                        .fill(matched.isExactMatch ? Color.appSafe : Color.appPrimary)
                         .frame(width: geo.size.width * matched.matchScore, height: 6)
                 }
             }
@@ -103,6 +103,7 @@ private struct MatchedRecipeCardView: View {
             }
         }
         .padding()
-        .background(Color(.secondarySystemBackground), in: RoundedRectangle(cornerRadius: 12))
+        .background(Color.appCardBackground, in: RoundedRectangle(cornerRadius: 12))
+        .shadow(color: .black.opacity(0.06), radius: 4, y: 2)
     }
 }

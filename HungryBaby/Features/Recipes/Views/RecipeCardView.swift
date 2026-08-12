@@ -23,7 +23,7 @@ struct RecipeCardView: View {
                 if recipe.kurashiruID != nil {
                     Image(systemName: "play.circle.fill")
                         .font(.title2)
-                        .foregroundStyle(.red.opacity(0.8))
+                        .foregroundStyle(Color(red: 0.0, green: 0.722, blue: 0.420).opacity(0.8))
                 }
             }
 
@@ -38,8 +38,8 @@ struct RecipeCardView: View {
                     .font(.caption)
                     .padding(.horizontal, 6)
                     .padding(.vertical, 2)
-                    .background(.blue.opacity(0.08))
-                    .foregroundStyle(.blue)
+                    .background(Color.appPrimary.opacity(0.08))
+                    .foregroundStyle(Color.appPrimary)
                     .clipShape(Capsule())
 
                 Spacer()
@@ -71,6 +71,7 @@ struct RecipeCardView: View {
             }
         }
         .padding()
-        .background(Color(.secondarySystemBackground), in: RoundedRectangle(cornerRadius: 12))
+        .background(Color.appCardBackground, in: RoundedRectangle(cornerRadius: 12))
+        .shadow(color: .black.opacity(0.06), radius: 4, y: 2)
     }
 }

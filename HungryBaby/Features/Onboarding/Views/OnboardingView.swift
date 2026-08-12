@@ -14,10 +14,11 @@ struct OnboardingView: View {
                 VStack(spacing: 12) {
                     Image(systemName: "fork.knife.circle.fill")
                         .font(.system(size: 80))
-                        .foregroundStyle(.orange)
+                        .foregroundStyle(Color.appPrimary)
 
                     Text("HungryBaby")
                         .font(.largeTitle.bold())
+                        .foregroundStyle(Color.appPrimary)
 
                     Text("赤ちゃんの離乳食をサポートします")
                         .font(.subheadline)
@@ -57,13 +58,13 @@ struct OnboardingView: View {
                     if let stage = StageCalculator.stage(for: viewModel.birthDate) {
                         HStack {
                             Image(systemName: "info.circle.fill")
-                                .foregroundStyle(.blue)
+                                .foregroundStyle(stage.systemColor)
                             Text("現在: \(stage.displayName)（\(stage.ageRangeDescription)）")
                                 .font(.callout)
-                                .foregroundStyle(.blue)
+                                .foregroundStyle(stage.systemColor)
                         }
                         .padding(12)
-                        .background(.blue.opacity(0.08), in: RoundedRectangle(cornerRadius: 10))
+                        .background(stage.lightColor, in: RoundedRectangle(cornerRadius: 10))
                     }
                 }
                 .padding(.horizontal)
@@ -78,13 +79,14 @@ struct OnboardingView: View {
                         .font(.headline)
                         .frame(maxWidth: .infinity)
                         .padding()
-                        .background(.orange)
+                        .background(Color.appPrimary)
                         .foregroundStyle(.white)
-                        .clipShape(RoundedRectangle(cornerRadius: 14))
+                        .clipShape(RoundedRectangle(cornerRadius: 12))
                 }
                 .padding(.horizontal)
                 .padding(.bottom)
             }
+            .background(Color.appBackground)
         }
     }
 }

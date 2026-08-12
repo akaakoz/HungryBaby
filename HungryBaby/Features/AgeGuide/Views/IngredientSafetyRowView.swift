@@ -10,9 +10,9 @@ struct IngredientSafetyRowView: View {
 
     private var safetyColor: Color {
         switch safetyLevel {
-        case .ok: .green
-        case .caution: .orange
-        case .prohibited: .red
+        case .ok: .appSafe
+        case .caution: .appCaution
+        case .prohibited: .appDanger
         }
     }
 
@@ -37,8 +37,8 @@ struct IngredientSafetyRowView: View {
                     .font(.caption2)
                     .padding(.horizontal, 6)
                     .padding(.vertical, 2)
-                    .background(.orange.opacity(0.15))
-                    .foregroundStyle(.orange)
+                    .background(Color.appCaution.opacity(0.15))
+                    .foregroundStyle(Color.appCaution)
                     .clipShape(Capsule())
             }
 

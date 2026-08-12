@@ -18,12 +18,12 @@ struct IngredientChipView: View {
             }
             .padding(.horizontal, 12)
             .padding(.vertical, 6)
-            .background(isSelected ? Color.orange : Color(.secondarySystemBackground))
+            .background(isSelected ? Color.appPrimary : Color(.secondarySystemBackground))
             .foregroundStyle(isSelected ? .white : .primary)
             .clipShape(Capsule())
             .overlay(
                 Capsule()
-                    .stroke(isSelected ? Color.orange : Color.gray.opacity(0.3), lineWidth: 1)
+                    .stroke(isSelected ? Color.appPrimary : Color.gray.opacity(0.3), lineWidth: 1)
             )
         }
         .buttonStyle(.plain)

@@ -17,7 +17,7 @@ struct IngredientDetailView: View {
                     if ingredient.allergen {
                         Label("主要アレルゲン", systemImage: "exclamationmark.triangle.fill")
                             .font(.callout)
-                            .foregroundStyle(.orange)
+                            .foregroundStyle(Color.appCaution)
                     }
                 }
 
@@ -61,9 +61,9 @@ private struct StageSafetyRow: View {
 
     private var levelColor: Color {
         switch level {
-        case .ok: .green
-        case .caution: .orange
-        case .prohibited: .red
+        case .ok: .appSafe
+        case .caution: .appCaution
+        case .prohibited: .appDanger
         }
     }
 
@@ -91,7 +91,7 @@ private struct StageSafetyRow: View {
             if let reason = safety?.prohibitionReason {
                 Text(reason)
                     .font(.caption)
-                    .foregroundStyle(.red.opacity(0.8))
+                    .foregroundStyle(Color.appDanger.opacity(0.8))
                     .padding(.leading, 20)
             } else if let guidance = safety?.sizeGuidance {
                 Text(guidance)

@@ -79,7 +79,7 @@ struct RecipeDetailView: View {
                                 .font(.headline)
                                 .foregroundStyle(.white)
                                 .frame(width: 28, height: 28)
-                                .background(.orange)
+                                .background(Color.appPrimary)
                                 .clipShape(Circle())
 
                             Text(step)
