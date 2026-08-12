@@ -31,6 +31,7 @@ struct HungryBabyApp: App {
             RootTabView()
                 .modelContainer(container)
                 .environment(profileService)
+                .preferredColorScheme(.light)
                 .task {
                     await SeedDataService.seedIfNeeded(in: container)
                 }
