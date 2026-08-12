@@ -18,6 +18,9 @@ struct RootTabView: View {
             Tab("冷蔵庫", systemImage: "refrigerator") {
                 FridgeSearchView()
             }
+            Tab("設定", systemImage: "gearshape") {
+                SettingsView()
+            }
         }
         .onAppear {
             if profileService.currentProfile == nil {
