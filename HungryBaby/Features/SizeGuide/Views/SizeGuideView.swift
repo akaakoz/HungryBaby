@@ -1,4 +1,5 @@
 import SwiftUI
+import SwiftData
 
 struct SizeGuideView: View {
     @State private var viewModel = SizeGuideViewModel()

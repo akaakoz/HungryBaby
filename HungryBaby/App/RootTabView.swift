@@ -1,4 +1,5 @@
 import SwiftUI
+import SwiftData
 
 struct RootTabView: View {
     @Environment(BabyProfileService.self) private var profileService
