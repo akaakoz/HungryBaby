@@ -1,7 +1,7 @@
 import SwiftUI
 import WebKit
 
-struct KurashiruWebView: View {
+struct RecipeSiteWebView: View {
     let url: URL
     let title: String
 
