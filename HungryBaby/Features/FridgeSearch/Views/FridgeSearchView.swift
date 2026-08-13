@@ -86,21 +86,29 @@ struct FridgeSearchView: View {
                                 HStack {
                                     Text(item.name)
                                     Spacer()
-                                    Text(item.addedAt, style: .date)
-                                        .font(.caption)
-                                        .foregroundStyle(.secondary)
-                                }
-                            }
-                            .onDelete { indexSet in
-                                for index in indexSet {
-                                    viewModel.deleteItem(fridgeItems[index], context: context)
+                                    Button {
+                                        viewModel.deleteItem(item, context: context)
+                                    } label: {
+                                        Image(systemName: "xmark.circle.fill")
+                                            .foregroundStyle(.secondary)
+                                    }
+                                    .buttonStyle(.plain)
                                 }
                             }
                         }
                     }
                 }
             }
+            .onTapGesture { isTextFieldFocused = false }
             .navigationTitle("冷蔵庫検索")
+            .toolbar {
+                if isTextFieldFocused {
+                    ToolbarItemGroup(placement: .keyboard) {
+                        Spacer()
+                        Button("閉じる") { isTextFieldFocused = false }
+                    }
+                }
+            }
         }
     }
 }
