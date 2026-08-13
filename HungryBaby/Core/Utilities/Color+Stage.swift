@@ -33,10 +33,13 @@ extension BabyStage {
     /// babyFood Flutter app と雰囲気を合わせたパステル系カラー
     var systemColor: Color {
         switch self {
-        case .gokun:    Color(red: 1.0, green: 0.596, blue: 0.396)    // やわらかいオレンジ
-        case .mogumogu: Color(red: 0.506, green: 0.780, blue: 0.518)  // やさしいグリーン
-        case .kamikamu: Color(red: 0.506, green: 0.694, blue: 0.898)  // 穏やかなブルー
-        case .pakupaku: Color(red: 0.733, green: 0.557, blue: 0.827)  // やわらかいパープル
+        case .gokun:          Color(red: 1.0, green: 0.596, blue: 0.396)    // やわらかいオレンジ
+        case .mogumogu:       Color(red: 0.506, green: 0.780, blue: 0.518)  // やさしいグリーン
+        case .kamikamu:       Color(red: 0.506, green: 0.694, blue: 0.898)  // 穏やかなブルー
+        case .pakupaku:       Color(red: 0.733, green: 0.557, blue: 0.827)  // やわらかいパープル
+        case .oneAndHalf:     Color(red: 0.937, green: 0.604, blue: 0.604)  // やわらかいピンク
+        case .twoYears:       Color(red: 0.600, green: 0.769, blue: 0.737)  // ミントグリーン
+        case .threeYearsPlus: Color(red: 0.741, green: 0.686, blue: 0.569)  // やさしいベージュ
         }
     }
 

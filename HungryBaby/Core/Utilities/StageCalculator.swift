@@ -9,7 +9,10 @@ enum StageCalculator {
         case 5...6: return .gokun
         case 7...8: return .mogumogu
         case 9...11: return .kamikamu
-        case 12...: return .pakupaku
+        case 12...18: return .pakupaku
+        case 19...23: return .oneAndHalf
+        case 24...35: return .twoYears
+        case 36...: return .threeYearsPlus
         default: return nil
         }
     }

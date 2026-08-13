@@ -2,6 +2,7 @@ import SwiftUI
 
 struct RecipeDetailView: View {
     let recipe: Recipe
+    @Environment(BabyProfileService.self) private var profileService
 
     var body: some View {
         ScrollView {
@@ -36,10 +37,8 @@ struct RecipeDetailView: View {
                 Divider()
 
                 // クラシルリンク
-                if let kurashiruID = recipe.kurashiruID {
-                    KurashiruLinkButton(recipeID: kurashiruID)
-                    Divider()
-                }
+                KurashiruLinkButton(searchQuery: recipe.nameJP, stage: profileService.currentStage)
+                Divider()
 
                 // 材料
                 VStack(alignment: .leading, spacing: 10) {

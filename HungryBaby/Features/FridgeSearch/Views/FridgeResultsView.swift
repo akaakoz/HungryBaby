@@ -4,9 +4,44 @@ import SwiftData
 struct FridgeResultsView: View {
     @Query private var recipes: [Recipe]
     let viewModel: FridgeSearchViewModel
+    @Environment(BabyProfileService.self) private var profileService
 
     var matchedRecipes: [FridgeSearchViewModel.MatchedRecipe] {
         viewModel.matchedRecipes(from: recipes)
+    }
+
+    private var selectedIngredientNames: [String] {
+        viewModel.selectedIngredients.map(\.nameJP)
+    }
+
+    private var kurashiruSearchLink: some View {
+        let kurashiruGreen = Color(red: 0.0, green: 0.722, blue: 0.420)
+        return NavigationLink {
+            KurashiruWebView(
+                url: KurashiruService.searchURL(ingredients: selectedIngredientNames, stage: profileService.currentStage),
+                title: "クラシルで検索"
+            )
+        } label: {
+            HStack {
+                Image(systemName: "play.circle.fill")
+                    .font(.title2)
+                Text("クラシルで動画を探す")
+                    .font(.headline)
+                Spacer()
+                Image(systemName: "chevron.right")
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+            }
+            .padding()
+            .background(kurashiruGreen.opacity(0.08))
+            .foregroundStyle(kurashiruGreen)
+            .clipShape(RoundedRectangle(cornerRadius: 12))
+            .overlay(
+                RoundedRectangle(cornerRadius: 12)
+                    .stroke(kurashiruGreen.opacity(0.3), lineWidth: 1)
+            )
+        }
+        .buttonStyle(.plain)
     }
 
     var body: some View {
@@ -25,6 +60,8 @@ struct FridgeResultsView: View {
         } else {
             ScrollView {
                 LazyVStack(spacing: 12) {
+                    kurashiruSearchLink
+
                     ForEach(matchedRecipes) { matched in
                         NavigationLink {
                             RecipeDetailView(recipe: matched.recipe)
