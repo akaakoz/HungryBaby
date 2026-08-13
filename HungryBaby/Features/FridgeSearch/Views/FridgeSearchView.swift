@@ -12,28 +12,38 @@ struct FridgeSearchView: View {
         NavigationStack {
             VStack(spacing: 0) {
                 // 食材入力エリア
-                HStack {
-                    TextField("食材を入力", text: $viewModel.newItemName)
-                        .textFieldStyle(.roundedBorder)
-                        .focused($isTextFieldFocused)
-                        .onSubmit {
-                            viewModel.addItem(context: context)
-                            isTextFieldFocused = false
-                        }
+                HStack(spacing: 12) {
+                    HStack(spacing: 8) {
+                        Image(systemName: "magnifyingglass")
+                            .foregroundStyle(.secondary)
+                        TextField("食材を追加（例：にんじん）", text: $viewModel.newItemName)
+                            .focused($isTextFieldFocused)
+                            .onSubmit {
+                                viewModel.addItem(context: context)
+                                isTextFieldFocused = false
+                            }
+                    }
+                    .padding(10)
+                    .background(Color(.secondarySystemBackground))
+                    .clipShape(RoundedRectangle(cornerRadius: 10))
 
+                    let isEmpty = viewModel.newItemName.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
                     Button {
                         viewModel.addItem(context: context)
                         isTextFieldFocused = false
                     } label: {
-                        Image(systemName: "plus.circle.fill")
-                            .font(.title2)
-                            .foregroundStyle(Color.appPrimary)
+                        Text("追加")
+                            .font(.callout.bold())
+                            .foregroundStyle(.white)
+                            .padding(.horizontal, 16)
+                            .padding(.vertical, 10)
+                            .background(isEmpty ? Color.gray.opacity(0.4) : Color.appPrimary)
+                            .clipShape(RoundedRectangle(cornerRadius: 10))
                     }
-                    .disabled(viewModel.newItemName.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)
+                    .disabled(isEmpty)
                 }
                 .padding()
-
-                Divider()
+                .background(Color.appBackground)
 
                 if fridgeItems.isEmpty {
                     ContentUnavailableView(
