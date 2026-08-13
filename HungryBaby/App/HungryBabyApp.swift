@@ -19,7 +19,8 @@ struct HungryBabyApp: App {
             Ingredient.self,
             IngredientSafety.self,
             Recipe.self,
-            RecipeIngredient.self
+            RecipeIngredient.self,
+            FridgeItem.self
         ])
         let modelContainer = try! ModelContainer(for: schema)
         container = modelContainer
