@@ -5,6 +5,9 @@ enum BabyStage: String, CaseIterable, Codable, Identifiable {
     case mogumogu = "mogumogu"
     case kamikamu = "kamikamu"
     case pakupaku = "pakupaku"
+    case oneAndHalf = "oneAndHalf"
+    case twoYears = "twoYears"
+    case threeYearsPlus = "threeYearsPlus"
 
     var id: String { rawValue }
 
@@ -14,6 +17,9 @@ enum BabyStage: String, CaseIterable, Codable, Identifiable {
         case .mogumogu: "モグモグ期"
         case .kamikamu: "カミカミ期"
         case .pakupaku: "パクパク期"
+        case .oneAndHalf: "1歳半"
+        case .twoYears: "2歳"
+        case .threeYearsPlus: "3歳以上"
         }
     }
 
@@ -24,6 +30,9 @@ enum BabyStage: String, CaseIterable, Codable, Identifiable {
         case .mogumogu: 7...8
         case .kamikamu: 9...11
         case .pakupaku: 12...18
+        case .oneAndHalf: 19...23
+        case .twoYears: 24...35
+        case .threeYearsPlus: 36...72
         }
     }
 
@@ -33,6 +42,9 @@ enum BabyStage: String, CaseIterable, Codable, Identifiable {
         case .mogumogu: "生後7〜8ヶ月"
         case .kamikamu: "生後9〜11ヶ月"
         case .pakupaku: "生後12〜18ヶ月"
+        case .oneAndHalf: "1歳半〜2歳"
+        case .twoYears: "2歳〜3歳"
+        case .threeYearsPlus: "3歳以上"
         }
     }
 
@@ -42,16 +54,22 @@ enum BabyStage: String, CaseIterable, Codable, Identifiable {
         case .mogumogu: "舌でつぶせる軟らかさ（約3mm）"
         case .kamikamu: "歯ぐきでつぶせる軟らかさ（約5〜7mm）"
         case .pakupaku: "歯ぐきで噛める軟らかさ（約1cm）"
+        case .oneAndHalf: "奥歯で噛める軟らかさ"
+        case .twoYears: "ほぼ大人と同じ形状"
+        case .threeYearsPlus: "大人と同じ形状"
         }
     }
 
-    /// サイズの目安（mm）。ゴックン期はピューレなのでnil
+    /// サイズの目安（mm）。ペースト状・大人と同じはnil
     var approximateSizeMM: Int? {
         switch self {
         case .gokun: nil
         case .mogumogu: 3
         case .kamikamu: 7
         case .pakupaku: 10
+        case .oneAndHalf: 15
+        case .twoYears: 20
+        case .threeYearsPlus: nil
         }
     }
 
@@ -61,6 +79,9 @@ enum BabyStage: String, CaseIterable, Codable, Identifiable {
         case .mogumogu: "7倍粥"
         case .kamikamu: "5倍粥"
         case .pakupaku: "軟飯"
+        case .oneAndHalf: "普通のごはん"
+        case .twoYears: "普通のごはん"
+        case .threeYearsPlus: "普通のごはん"
         }
     }
 
@@ -70,6 +91,9 @@ enum BabyStage: String, CaseIterable, Codable, Identifiable {
         case .mogumogu: "StageMogumogu"
         case .kamikamu: "StageKamikamu"
         case .pakupaku: "StagePakupaku"
+        case .oneAndHalf: "StageOneAndHalf"
+        case .twoYears: "StageTwoYears"
+        case .threeYearsPlus: "StageThreePlus"
         }
     }
 
@@ -79,6 +103,22 @@ enum BabyStage: String, CaseIterable, Codable, Identifiable {
         case .mogumogu: "circle.fill"
         case .kamikamu: "square.fill"
         case .pakupaku: "star.fill"
+        case .oneAndHalf: "heart.fill"
+        case .twoYears: "leaf.fill"
+        case .threeYearsPlus: "sun.max.fill"
+        }
+    }
+
+    /// クラシル検索用キーワード
+    var searchKeyword: String {
+        switch self {
+        case .gokun: "離乳食初期"
+        case .mogumogu: "離乳食中期"
+        case .kamikamu: "離乳食後期"
+        case .pakupaku: "離乳食完了期"
+        case .oneAndHalf: "幼児食 1歳半"
+        case .twoYears: "幼児食 2歳"
+        case .threeYearsPlus: "幼児食 3歳"
         }
     }
 
@@ -88,6 +128,9 @@ enum BabyStage: String, CaseIterable, Codable, Identifiable {
         case .mogumogu: "1日2回"
         case .kamikamu: "1日3回"
         case .pakupaku: "1日3回（大人と同じリズム）"
+        case .oneAndHalf: "1日3回＋おやつ"
+        case .twoYears: "1日3回＋おやつ"
+        case .threeYearsPlus: "1日3回＋おやつ"
         }
     }
 }

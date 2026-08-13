@@ -1,23 +1,24 @@
 import SwiftUI
 
 struct KurashiruLinkButton: View {
-    let recipeID: String
-
-    /// クラシルのブランドカラー
+    let searchQuery: String
+    let stage: BabyStage?
     private let kurashiruGreen = Color(red: 0.0, green: 0.722, blue: 0.420)
 
     var body: some View {
-        Button {
-            let url = KurashiruService.url(for: recipeID)
-            UIApplication.shared.open(url)
+        NavigationLink {
+            KurashiruWebView(
+                url: KurashiruService.searchURL(recipeName: searchQuery, stage: stage),
+                title: "クラシルで検索"
+            )
         } label: {
             HStack {
                 Image(systemName: "play.circle.fill")
                     .font(.title2)
-                Text("クラシルで動画を見る")
+                Text("クラシルで動画を探す")
                     .font(.headline)
                 Spacer()
-                Image(systemName: "arrow.up.right.square")
+                Image(systemName: "chevron.right")
                     .font(.caption)
                     .foregroundStyle(.secondary)
             }

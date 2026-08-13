@@ -20,11 +20,9 @@ struct RecipeCardView: View {
 
                 Spacer()
 
-                if recipe.kurashiruID != nil {
-                    Image(systemName: "play.circle.fill")
-                        .font(.title2)
-                        .foregroundStyle(Color(red: 0.0, green: 0.722, blue: 0.420).opacity(0.8))
-                }
+                Image(systemName: "play.circle.fill")
+                    .font(.title2)
+                    .foregroundStyle(Color(red: 0.0, green: 0.722, blue: 0.420).opacity(0.8))
             }
 
             HStack(spacing: 8) {

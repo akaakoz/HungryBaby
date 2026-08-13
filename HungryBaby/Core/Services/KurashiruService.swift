@@ -1,22 +1,24 @@
 import Foundation
-import UIKit
 
 struct KurashiruService {
-    private static let appScheme = "kurashiru"
-    private static let webBase = "https://www.kurashiru.com/recipes"
+    private static let searchBase = "https://www.kurashiru.com/search"
 
-    /// クラシルアプリがインストール済みならアプリURLを、なければWebURLを返す
-    static func url(for recipeID: String) -> URL {
-        let appURLString = "\(appScheme)://recipe?id=\(recipeID)"
-        if let appURL = URL(string: appURLString),
-           UIApplication.shared.canOpenURL(appURL) {
-            return appURL
-        }
-        // フォールバック: ブラウザで開く
-        return URL(string: "\(webBase)/\(recipeID)")!
+    /// 食材名の配列 + ステージからクラシル検索URLを生成
+    static func searchURL(ingredients: [String], stage: BabyStage?) -> URL {
+        var terms = ingredients
+        if let stage { terms.append(stage.searchKeyword) }
+        let query = terms.joined(separator: " ")
+        var components = URLComponents(string: searchBase)!
+        components.queryItems = [URLQueryItem(name: "query", value: query)]
+        return components.url!
     }
 
-    static func webURL(for recipeID: String) -> URL {
-        URL(string: "\(webBase)/\(recipeID)")!
+    /// レシピ名 + ステージでクラシル検索URLを生成
+    static func searchURL(recipeName: String, stage: BabyStage?) -> URL {
+        var query = recipeName
+        if let stage { query += " \(stage.searchKeyword)" }
+        var components = URLComponents(string: searchBase)!
+        components.queryItems = [URLQueryItem(name: "query", value: query)]
+        return components.url!
     }
 }

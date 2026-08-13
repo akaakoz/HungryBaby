@@ -15,14 +15,26 @@ struct AgeGuideView: View {
                             .onAppear { selectedStage = stage }
                     }
 
-                    // ステージ切り替えセグメント
-                    Picker("ステージ", selection: $selectedStage) {
-                        ForEach(BabyStage.allCases) { stage in
-                            Text(stage.displayName).tag(stage)
+                    // ステージ切り替え
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        HStack(spacing: 8) {
+                            ForEach(BabyStage.allCases) { stage in
+                                Button {
+                                    selectedStage = stage
+                                } label: {
+                                    Text(stage.displayName)
+                                        .font(.callout.bold())
+                                        .padding(.horizontal, 14)
+                                        .padding(.vertical, 8)
+                                        .background(selectedStage == stage ? stage.systemColor : Color(.secondarySystemBackground))
+                                        .foregroundStyle(selectedStage == stage ? .white : .primary)
+                                        .clipShape(Capsule())
+                                }
+                                .buttonStyle(.plain)
+                            }
                         }
+                        .padding(.horizontal)
                     }
-                    .pickerStyle(.segmented)
-                    .padding(.horizontal)
 
                     // 授乳回数情報
                     HStack {
