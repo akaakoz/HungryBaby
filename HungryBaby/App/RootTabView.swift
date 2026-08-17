@@ -7,14 +7,11 @@ struct RootTabView: View {
 
     var body: some View {
         TabView {
-            Tab("月齢ガイド", systemImage: "calendar") {
-                AgeGuideView()
-            }
-Tab("レシピ", systemImage: "fork.knife") {
-                RecipeListView()
-            }
             Tab("冷蔵庫", systemImage: "refrigerator") {
                 FridgeSearchView()
+            }
+            Tab("月齢ガイド", systemImage: "calendar") {
+                AgeGuideView()
             }
             Tab("設定", systemImage: "gearshape") {
                 SettingsView()
