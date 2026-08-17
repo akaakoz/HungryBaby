@@ -4,7 +4,6 @@ import SwiftData
 struct FridgeSearchView: View {
     @State private var viewModel = FridgeSearchViewModel()
     @Environment(\.modelContext) private var context
-    @Environment(BabyProfileService.self) private var profileService
     @Query(sort: \FridgeItem.addedAt, order: .reverse) private var fridgeItems: [FridgeItem]
     @FocusState private var isTextFieldFocused: Bool
 
@@ -49,33 +48,29 @@ struct FridgeSearchView: View {
                     ContentUnavailableView(
                         "食材を追加してください",
                         systemImage: "refrigerator",
-                        description: Text("上から冷蔵庫にある食材を入力すると、クラシルでレシピ動画を検索できます")
+                        description: Text("上から冷蔵庫にある食材を入力すると、こどもレシピでレシピを検索できます")
                     )
                 } else {
                     List {
-                        // クラシル検索ボタン
+                        // レシピサイト検索ボタン
                         Section {
                             NavigationLink {
-                                KurashiruWebView(
-                                    url: KurashiruService.searchURL(
-                                        ingredients: fridgeItems.map(\.name),
-                                        stage: profileService.currentStage
-                                    ),
-                                    title: "クラシルで検索"
+                                RecipeSiteWebView(
+                                    url: KidsRecipeService.searchURL(ingredients: fridgeItems.map(\.name)),
+                                    title: "こどもレシピで検索"
                                 )
                             } label: {
-                                let kurashiruGreen = Color(red: 0.0, green: 0.722, blue: 0.420)
                                 HStack {
-                                    Image(systemName: "play.circle.fill")
+                                    Image(systemName: "book.circle.fill")
                                         .font(.title2)
-                                    Text("クラシルで動画を探す")
+                                    Text("こどもレシピで探す")
                                         .font(.headline)
                                     Spacer()
                                     Image(systemName: "chevron.right")
                                         .font(.caption)
                                         .foregroundStyle(.secondary)
                                 }
-                                .foregroundStyle(kurashiruGreen)
+                                .foregroundStyle(Color.appPrimary)
                             }
                             .buttonStyle(.plain)
                         }
@@ -99,7 +94,7 @@ struct FridgeSearchView: View {
                     }
                 }
             }
-            .onTapGesture { isTextFieldFocused = false }
+            .scrollDismissesKeyboard(.interactively)
             .navigationTitle("冷蔵庫検索")
             .toolbar {
                 if isTextFieldFocused {

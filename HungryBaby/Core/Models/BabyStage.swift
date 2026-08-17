@@ -109,19 +109,6 @@ enum BabyStage: String, CaseIterable, Codable, Identifiable {
         }
     }
 
-    /// クラシル検索用キーワード
-    var searchKeyword: String {
-        switch self {
-        case .gokun: "離乳食初期"
-        case .mogumogu: "離乳食中期"
-        case .kamikamu: "離乳食後期"
-        case .pakupaku: "離乳食完了期"
-        case .oneAndHalf: "幼児食 1歳半"
-        case .twoYears: "幼児食 2歳"
-        case .threeYearsPlus: "幼児食 3歳"
-        }
-    }
-
     var feedingFrequency: String {
         switch self {
         case .gokun: "1日1回"
