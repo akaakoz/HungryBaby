@@ -11,44 +11,72 @@ struct FridgeSearchView: View {
         NavigationStack {
             VStack(spacing: 0) {
                 // 食材入力エリア
-                HStack(spacing: 12) {
-                    HStack(spacing: 8) {
-                        Image(systemName: "magnifyingglass")
-                            .foregroundStyle(.secondary)
-                        TextField("食材を追加（例：にんじん）", text: $viewModel.newItemName)
-                            .focused($isTextFieldFocused)
-                            .onSubmit {
-                                viewModel.addItem(context: context)
-                                isTextFieldFocused = false
-                            }
-                    }
-                    .padding(10)
-                    .background(Color(.secondarySystemBackground))
-                    .clipShape(RoundedRectangle(cornerRadius: 10))
+                VStack(spacing: 8) {
+                    HStack(spacing: 12) {
+                        HStack(spacing: 8) {
+                            Image(systemName: "magnifyingglass")
+                                .foregroundStyle(.secondary)
+                            TextField("食材を追加（例：にんじん）", text: $viewModel.newItemName)
+                                .focused($isTextFieldFocused)
+                                .onSubmit {
+                                    viewModel.addItem(context: context)
+                                    isTextFieldFocused = false
+                                }
+                        }
+                        .padding(10)
+                        .background(Color(.secondarySystemBackground))
+                        .clipShape(RoundedRectangle(cornerRadius: 10))
 
-                    let isEmpty = viewModel.newItemName.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
-                    Button {
-                        viewModel.addItem(context: context)
-                        isTextFieldFocused = false
-                    } label: {
-                        Text("追加")
-                            .font(.callout.bold())
-                            .foregroundStyle(.white)
-                            .padding(.horizontal, 16)
-                            .padding(.vertical, 10)
-                            .background(isEmpty ? Color.gray.opacity(0.4) : Color.appPrimary)
-                            .clipShape(RoundedRectangle(cornerRadius: 10))
+                        let isEmpty = viewModel.newItemName.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
+                        Button {
+                            viewModel.addItem(context: context)
+                            isTextFieldFocused = false
+                        } label: {
+                            Text("追加")
+                                .font(.callout.bold())
+                                .foregroundStyle(.white)
+                                .padding(.horizontal, 16)
+                                .padding(.vertical, 10)
+                                .background(isEmpty ? Color.gray.opacity(0.4) : Color.appPrimary)
+                                .clipShape(RoundedRectangle(cornerRadius: 10))
+                        }
+                        .disabled(isEmpty)
                     }
-                    .disabled(isEmpty)
+
+                    // レシート撮影ボタン
+                    Button {
+                        isTextFieldFocused = false
+                        viewModel.showCamera = true
+                    } label: {
+                        HStack {
+                            Image(systemName: "camera.fill")
+                            Text("レシートを撮影して追加")
+                                .font(.callout)
+                        }
+                        .frame(maxWidth: .infinity)
+                        .padding(.vertical, 10)
+                        .background(Color(.secondarySystemBackground))
+                        .foregroundStyle(Color.appPrimary)
+                        .clipShape(RoundedRectangle(cornerRadius: 10))
+                    }
                 }
                 .padding()
                 .background(Color.appBackground)
 
-                if fridgeItems.isEmpty {
+                if viewModel.isScanning {
+                    VStack(spacing: 12) {
+                        ProgressView()
+                            .controlSize(.large)
+                        Text("レシートを読み取り中...")
+                            .font(.callout)
+                            .foregroundStyle(.secondary)
+                    }
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                } else if fridgeItems.isEmpty {
                     ContentUnavailableView(
                         "食材を追加してください",
                         systemImage: "refrigerator",
-                        description: Text("上から冷蔵庫にある食材を入力すると、こどもレシピでレシピを検索できます")
+                        description: Text("食材を入力するか、レシートを撮影して追加できます")
                     )
                 } else {
                     List {
@@ -103,6 +131,16 @@ struct FridgeSearchView: View {
                         Button("閉じる") { isTextFieldFocused = false }
                     }
                 }
+            }
+            .fullScreenCover(isPresented: $viewModel.showCamera) {
+                CameraView { image in
+                    Task {
+                        await viewModel.processReceiptImage(image)
+                    }
+                }
+            }
+            .sheet(isPresented: $viewModel.showScannedItems) {
+                ScannedItemsView(viewModel: viewModel)
             }
         }
     }
