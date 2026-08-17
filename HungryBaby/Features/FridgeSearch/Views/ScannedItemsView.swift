@@ -15,16 +15,25 @@ struct ScannedItemsView: View {
                 }
 
                 Section("読み取り結果") {
-                    ForEach($viewModel.scannedItems) { $item in
+                    ForEach(viewModel.scannedItems) { item in
                         HStack {
-                            Image(systemName: item.isSelected ? "checkmark.circle.fill" : "circle")
-                                .foregroundStyle(item.isSelected ? Color.appPrimary : .secondary)
-                            Text(item.name)
-                            Spacer()
-                        }
-                        .contentShape(Rectangle())
-                        .onTapGesture {
-                            item.isSelected.toggle()
+                            Button {
+                                viewModel.toggleScannedItem(id: item.id)
+                            } label: {
+                                Image(systemName: item.isSelected ? "checkmark.circle.fill" : "circle")
+                                    .foregroundStyle(item.isSelected ? Color.appPrimary : .secondary)
+                            }
+                            .buttonStyle(.plain)
+
+                            TextField("食材名", text: viewModel.bindingForScannedItemName(id: item.id))
+
+                            Button {
+                                viewModel.removeScannedItem(id: item.id)
+                            } label: {
+                                Image(systemName: "xmark.circle.fill")
+                                    .foregroundStyle(.secondary)
+                            }
+                            .buttonStyle(.plain)
                         }
                     }
                 }

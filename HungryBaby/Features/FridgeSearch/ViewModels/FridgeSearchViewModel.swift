@@ -1,6 +1,7 @@
 import Foundation
 import Observation
 import SwiftData
+import SwiftUI
 import UIKit
 
 @Observable
@@ -14,7 +15,7 @@ final class FridgeSearchViewModel {
 
     struct ScannedItem: Identifiable {
         let id = UUID()
-        let name: String
+        var name: String
         var isSelected: Bool = true
     }
 
@@ -38,6 +39,26 @@ final class FridgeSearchViewModel {
         if !scannedItems.isEmpty {
             showScannedItems = true
         }
+    }
+
+    func removeScannedItem(id: UUID) {
+        scannedItems.removeAll { $0.id == id }
+    }
+
+    func toggleScannedItem(id: UUID) {
+        guard let index = scannedItems.firstIndex(where: { $0.id == id }) else { return }
+        scannedItems[index].isSelected.toggle()
+    }
+
+    func bindingForScannedItemName(id: UUID) -> Binding<String> {
+        Binding(
+            get: { self.scannedItems.first(where: { $0.id == id })?.name ?? "" },
+            set: { newValue in
+                if let index = self.scannedItems.firstIndex(where: { $0.id == id }) {
+                    self.scannedItems[index].name = newValue
+                }
+            }
+        )
     }
 
     func addSelectedScannedItems(context: ModelContext) {
